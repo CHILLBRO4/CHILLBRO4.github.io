@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToR8T5kwSIAiz151bjQx3xK2Sp7MHipzg2xg&usqp=CAU" />
+
+</head>
+   
+<body> 
+    <link rel="stylesheet" href="./web.css">
+
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
+
+    <h1>Happy Birthday</h1>
+   <div class = "name" id = "name">
+       <span id = "iname"></span> <!--span id will be the id in document.get element-->
+       <script>
+
+var url = window.location.search.slice(1);
+
+url = url.replace(/=/g , '":"');
+url = url.replace(/&/g , '","');
+url = '{"'+url+'"}'
+var wish = JSON.parse(url)
+
+document.getElementById("name").innerHTML= (wish.namei)
+           document.getElementById("iname").innerHTML= localStorage.getItem("passName")
+       </script>
+</div>
+<div class = "wname" >
+<script>
+   document.write("On this wonderful day, I wish you the best that life has to offer! Happy birthday! Birthdays come around every year, but friends like you can only be found once in a lifetime. Wishing you a fabulous birthday!")
+
+</script>
+</div>
+<br>
+<div class = "wname" id = "wname">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
+    <script>
+      var url = window.location.search.slice(1);
+
+      url = url.replace(/=/g , '":"');
+      url = url.replace(/&/g , '","');
+      url = '{"'+url+'"}'
+     var wish = JSON.parse(url)
+
+      document.getElementById("wname").innerHTML= (wish.namew)
+
+   </script>
+   
+</div>
+
+
+<!-- Confetti-->
+
+<script src = "./web.js"></script>
+<script>
+    const start = () =>{
+        setTimeout(function(){
+            confetti.start()
+        })
+    }
+
+    start();
+
+
+        const stop = () =>{
+        setTimeout(function(){
+            confetti.stop()
+        }, 5000)
+    }
+
+    stop();
+</script> 
+<!-- Back Ground 
+<div class =  "stars"></div>
+<div class =  "twinkle"></div>
+<div class =  "sky"></div>-->
+<!-- bday Dates -->
+
+ 
